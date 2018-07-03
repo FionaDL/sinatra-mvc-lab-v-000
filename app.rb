@@ -5,6 +5,7 @@ class App < Sinatra::Base
     erb :user_input
   end
   post "/" do
-    erb :user_input
+    @user_input = params[0]
+    erb :user_input_show
   end
 end
